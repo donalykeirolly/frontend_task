@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task2.css">
+    <title>Транспортные средства</title>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="task2.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="vehicles">
+        <h2>Транспортрые средства и водители</h2>
+        <div class="gos_number">
+            <label for="gos_number">Гос-номер</label>
+            <p><input type="text" name="gos_number" id="gos_number" placeholder="Укажите гос-номер" required></p>
+        </div>
+        <div class="vehicle">
+            <label for="vehicle">Транспортное средство</label>
+            <p><input type="text" name="vehicle" id="vehicle" placeholder="Транспортное средство" maxlength="20" required></p>
+        </div>
+        <form id="no_change">
+        <div class="date">
+            <label for="date">Ориентировочная дата прибытия к покупателю</label>
+            <p><input type="text" name="arriving_date" id="arriving_date" 
+                placeholder="Дата*" onfocus="(this.type='date')" required></p>
+        </div>
+        </form>
+    </div>
+    <div class="driver_data">
+        <h3>Данные о водителе</h3>
+        <div class="fio">
+            <label for="fio">ФИО</label>
+            <p><input type="text" id="fio" name="fio" placeholder="Укажите ФИО водителя" maxlength="50" required></p>
+        </div>
+        <div class="pasport">
+            <label for="pasport">Паспортные данные</label>
+            <p><input type="text" name="passport_series" class="passport_series" id="passport_series" placeholder="Серия" required>
+                <input type="text" name="passport_number" class="passport_number" id="passport_number" placeholder="Номер" required></p>
+        </div>
+        <div class="who_issued">
+            <label for="issued">Кем выдан</label>
+            <p><input type="text" name="who_issued" id="who_issued" placeholder="Кем выдан" maxlength="50" required></p>
+        </div>
+        <div class="when_issued">
+            <label for="issued">Когда выдан</label>
+            <p><input type="text"  id="when_issued" name="when_issued"
+                placeholder="Когда выдан" onfocus="(this.type='date')" required></p>
+        </div>
+        <button type="button" id="send">Отправить</button> <!--Проверить работу кнопки можно через консоль-->
+        <button type="button" class="cancel">Отменить</button>
+    </div>
+</div>
+</body>
+</html>
